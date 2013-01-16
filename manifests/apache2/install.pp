@@ -1,6 +1,6 @@
-class php::apache2::install {
+class php::apache2::install ($version = 'present') {
   package { $php::params::apache_package_name:
-    ensure  => present,
+    ensure  => $version,
     notify  => Service[$php::params::apache_service_name],
   }
 }

@@ -1,6 +1,11 @@
-class php(
+class php (
+  $version = 'present',
   $cli_ini_content = undef,
   $cli_ini_source = undef
 ) {
-  include php::params, php::install, php::config
+  class { 'php::params': }
+  class { 'php::install':
+    version => $version
+  }
+  class { 'php::config': }
 }
