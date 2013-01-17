@@ -1,5 +1,5 @@
 define php::module(
-  $ensure = present,
+  $version = present,
   $package_prefix = 'php5-',
   $source = undef,
   $content = undef,
@@ -20,7 +20,7 @@ define php::module(
   }
 
   package { "php-${name}":
-    ensure  => $ensure,
+    ensure  => $version,
     name    => "${package_prefix}${name}",
     require => $real_require,
   }
@@ -42,7 +42,7 @@ define php::module(
   }
 
   file { $file_name:
-    ensure  => $ensure,
+    ensure  => $version,
     path    => "${php::params::conf_dir}${file_name}",
     mode    => '0644',
     owner   => 'root',
