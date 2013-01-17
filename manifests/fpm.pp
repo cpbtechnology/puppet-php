@@ -6,10 +6,10 @@ class php::fpm (
   $fpm_conf_source = undef
 ) {
   class { 'php':
-    version: $version
+    version => $version
   }
   class { 'php::fpm::install':
-    version: $version
+    version => $version
   }
   include php::fpm::config
   include php::fpm::service
