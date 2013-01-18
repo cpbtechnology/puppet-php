@@ -1,9 +1,9 @@
 class php::fpm (
-  $version = present,
-  $fpm_ini_content = undef,
-  $fpm_ini_source = undef,
+  $version          = present,
+  $fpm_ini_content  = undef,
+  $fpm_ini_source   = undef,
   $fpm_conf_content = undef,
-  $fpm_conf_source = undef
+  $fpm_conf_source  = undef
 ) {
   class { 'php':
     version => $version
