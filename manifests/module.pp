@@ -42,7 +42,7 @@ define php::module(
   }
 
   file { $file_name:
-    ensure  => $version,
+    ensure  => present,
     path    => "${php::params::conf_dir}${file_name}",
     mode    => '0644',
     owner   => 'root',
