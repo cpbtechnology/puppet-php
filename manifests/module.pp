@@ -1,5 +1,5 @@
 define php::module(
-  $version = present,
+  $ensure = present,
   $package_prefix = 'php5-',
   $source = undef,
   $content = undef,
@@ -20,7 +20,7 @@ define php::module(
   }
 
   package { "php-${name}":
-    ensure  => $version,
+    ensure  => $ensure,
     name    => "${package_prefix}${name}",
     require => $real_require,
   }
