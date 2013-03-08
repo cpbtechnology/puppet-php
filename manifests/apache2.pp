@@ -1,5 +1,5 @@
 class php::apache2 (
-  ensure               = present,
+  $ensure               = present,
   $apache2_ini_content = undef,
   $apache2_ini_source  = undef
 ) {
