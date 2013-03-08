@@ -1,9 +1,9 @@
 define php::extra (
-  $ensure = present,
-  $source = undef,
+  $ensure  = present,
+  $source  = undef,
   $content = undef,
   $require = undef,
-  $notify = undef
+  $notify  = undef
 ) {
   # Puppet will bail out if both source and content is set,
   # hence we don't have to deal with it.

@@ -1,15 +1,15 @@
 class php::fpm (
-  $version          = present,
+  $ensure           = present,
   $fpm_ini_content  = undef,
   $fpm_ini_source   = undef,
   $fpm_conf_content = undef,
   $fpm_conf_source  = undef
 ) {
   class { 'php':
-    version => $version
+    ensure => $ensure
   }
   class { 'php::fpm::install':
-    version => $version
+    ensure => $ensure
   }
   include php::fpm::config
   include php::fpm::service

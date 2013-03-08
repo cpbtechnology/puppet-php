@@ -1,5 +1,5 @@
-class php::install ($version = 'present') {
+class php::install ($ensure = 'present') {
   package { $php::params::cli_package_name:
-    ensure => $version,
+    ensure => $ensure,
   }
 }

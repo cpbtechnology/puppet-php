@@ -1,6 +1,6 @@
-class php::fpm::install ($version = 'present') {
+class php::fpm::install ($ensure = 'present') {
   package { $php::params::fpm_package_name:
-    ensure  => $version,
+    ensure  => $ensure,
     require => Class['php'],
   }
 }

@@ -1,11 +1,11 @@
 class php (
-  $version = 'present',
+  $ensure          = 'present',
   $cli_ini_content = undef,
-  $cli_ini_source = undef
+  $cli_ini_source  = undef
 ) {
   class { 'php::params': }
   class { 'php::install':
-    version => $version
+    ensure => $ensure
   }
   class { 'php::config': }
 }
