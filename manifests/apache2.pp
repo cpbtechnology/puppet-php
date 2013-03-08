@@ -8,7 +8,7 @@ class php::apache2 (
   class { 'php':
     ensure => $ensure
   }
-  class { 'php::apache2::install': {
+  class { 'php::apache2::install':
     ensure => $ensure
   }
   include php::apache2::config
